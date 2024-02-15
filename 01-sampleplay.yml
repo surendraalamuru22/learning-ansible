@@ -21,4 +21,4 @@
   tasks:
     - name: print lofar
       ansible.builtin.debug:
-        msg: lofar
+        msg: "lofar"
