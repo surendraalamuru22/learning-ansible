@@ -34,3 +34,12 @@
     - name: print variable
       ansible.builtin.debug:
         msg: URL = {{ URL }}
+
+- name: Demo on file variables
+  hosts: all
+  vars_files:
+    - sample-variable-file
+  tasks:
+    - name: print url from a file
+      ansible.builtin.debug:
+      msg: {{URL}}
