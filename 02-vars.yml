@@ -43,10 +43,12 @@
     - ansible.builtin.debug:
         msg: "{{URL}}"
 
-- hosts: all
+- name: Task level variable
+  hosts: all
   tasks:
-    ansible.builtin.debug:
-      msg: "{{URL}}"
-    vars:
-      URL: task.example.com
+    - name: prink url from task
+      ansible.builtin.debug:
+        msg: {{URL}}
+      vars:
+        URL: task.example.com
 
