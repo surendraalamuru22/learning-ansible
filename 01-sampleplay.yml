@@ -14,3 +14,11 @@
       ansible.builtin.debug:
         msg:
           - "bye"
+
+
+- hosts: all
+  name: demo of third play
+  tasks:
+    - name: print lofar
+      ansible.builtin.debug:
+        msg: lofar
