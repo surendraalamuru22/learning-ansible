@@ -46,7 +46,7 @@
 - name: Task level variable
   hosts: all
   tasks:
-    - name: prink url from task
+    - name: print url from task
       ansible.builtin.debug:
         msg: "{{URL}}"
       vars:
@@ -55,7 +55,6 @@
 - name: variable from inventory
   hosts: all
   tasks:
-    - name: print url from inventory
-      ansible.builtin.debug:
+    - ansible.builtin.debug:
       msg: "{{URL}}"
 
