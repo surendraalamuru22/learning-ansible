@@ -43,7 +43,7 @@
     - ansible.builtin.debug:
         msg: "{{URL}}"
 
-- name: Demo on task level variable
+- name: Task level variable
   hosts: all
   tasks:
     ansible.builtin.debug:
