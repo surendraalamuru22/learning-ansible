@@ -5,7 +5,7 @@
   tasks:
     - name: print variable
       ansible.builtin.debug:
-        msg: "URL = {{ URL }}"
+        msg: URL = {{ URL }}
 
 
 - name: Demo on variables2
@@ -25,3 +25,12 @@
     - name: print variable
       ansible.builtin.debug:
         msg: '{{ URL }}'
+
+- name: Demo on variables4
+  hosts: all
+  vars:
+    URL: "example.com"
+  tasks:
+    - name: print variable
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
