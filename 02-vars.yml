@@ -63,5 +63,5 @@
   hosts: all
   tasks:
     - ansible.builtin.debug:
-        msg: hostname = {{host_name}}
+        msg: hostname = {{ansible_hostname}}
 
