@@ -48,7 +48,7 @@
   tasks:
     - name: prink url from task
       ansible.builtin.debug:
-        msg: {{URL}}
+        msg: "{{URL}}"
       vars:
         URL: task.example.com
 
