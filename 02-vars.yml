@@ -1,4 +1,4 @@
-- name: Demo on variables
+- name: Demo on variables1
   hosts: all
   vars:
     URL: example.com
@@ -6,3 +6,13 @@
     - name: print variable
       ansible.builtin.debug:
         msg: "URL = {{ URL }}"
+
+
+- name: Demo on variables2
+  hosts: all
+  vars:
+    URL: example.com
+  tasks:
+    - name: print variable
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
