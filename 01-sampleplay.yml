@@ -6,3 +6,11 @@
         msg:
           - "Hello world!"
           - "fuck you"
+
+- hosts: all
+  name: demo of second play
+  tasks:
+    - name: print bye
+      ansible.builtin.debug:
+        msg:
+          - "bye"
