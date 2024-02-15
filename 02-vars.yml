@@ -41,4 +41,4 @@
     - sample-variable-file
   tasks:
     - ansible.builtin.debug:
-        msg: {{URL}}
+        msg: "{{URL}}"
