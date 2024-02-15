@@ -40,6 +40,6 @@
   vars_files:
     - sample-variable-file
   tasks:
-    - name: print url from a file
+    - name: print variable from a file
       ansible.builtin.debug:
       msg: "{{URL}}"
