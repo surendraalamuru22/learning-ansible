@@ -1,11 +1,12 @@
-- name: create parameters
+- name: Create Parameters
   hosts: localhost
   tasks:
-    - name: update parameter store
-      community.aws.ssm_parameter:
-        name: "test roboshop parameter"
-        description: "This is your first key"
+    - name: Update a Parameter
+      community.aws.aws_ssm_parameter_store:
+        name: "roboshop-parameter"
+        string_type: "String"
         value: "roboshop.com"
+        overwrite_value: "always"
 
 
 
