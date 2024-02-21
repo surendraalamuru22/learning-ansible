@@ -1,0 +1,13 @@
+- name: create parameters
+  hosts: localhost
+  tasks:
+    - name: update parameter store
+      community.aws.ssm_parameter:
+        name: "test roboshop parameter"
+        description: "This is your first key"
+        value: "roboshop.com"
+
+
+
+
+
