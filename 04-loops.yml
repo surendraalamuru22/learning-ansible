@@ -12,7 +12,7 @@
     - name: Print debug
       ansible.builtin.debug:
         msg: "Hello world"
-      loops:
+      loop:
         - banana
         - apple
         - orange
