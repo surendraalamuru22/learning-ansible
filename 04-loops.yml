@@ -4,3 +4,14 @@
     - name: Print debug
       ansible.builtin.debug:
         msg: "Hello world"
+
+- name: Demo on loops
+  hosts: localhost
+  tasks:
+    - name: Print debug
+      ansible.builtin.debug:
+        msg: "Hello world"
+      loops:
+        - apple
+        - banana
+        - pineapple
