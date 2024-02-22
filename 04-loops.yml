@@ -10,7 +10,7 @@
   tasks:
      - ansible.builtin.debug:
         msg: "Hello world"
-      loops:
+       loops:
         - apple
         - banana
         - pineapple
