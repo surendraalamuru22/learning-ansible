@@ -8,7 +8,7 @@
 - name: Demo on loops
   hosts: localhost
   tasks:
-    - name: Print debug
+    - name: Print on loops
       ansible.builtin.debug:
         msg: "Hello world"
       loops:
