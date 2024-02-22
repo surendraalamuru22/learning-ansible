@@ -5,13 +5,24 @@
 #      ansible.builtin.debug:
 #        msg: "Hello world"
 
+#
+#- name: Demo on loops
+#  hosts: localhost
+#  tasks:
+#    - name: Print debug
+#      ansible.builtin.debug:
+#        msg: "Hello world"
+#      loop:
+#        - banana
+#        - apple
+#        - orange
 
 - name: Demo on loops
   hosts: localhost
   tasks:
     - name: Print debug
       ansible.builtin.debug:
-        msg: "Hello world"
+        msg: Fruit name = {{item}}
       loop:
         - banana
         - apple
