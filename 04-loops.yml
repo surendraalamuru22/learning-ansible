@@ -31,14 +31,14 @@
 - name: Demo on list of maps
   hosts: localhost
   tasks:
-    - name: Print debug for list
+    - name: Print debug for list of values
       ansible.builtin.debug:
         msg: Fruit name = {{item}}
       loop:
         - banana
         - apple
         - orange
-    - name: Print debug with map
+    - name: Print debug with list of map
       ansible.builtin.debug:
         msg: Fruit name = {{item.name}} , Quantity = {{item.quantity}}
       loop:
