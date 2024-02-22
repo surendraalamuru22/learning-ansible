@@ -40,7 +40,7 @@
         - orange
     - name: Print debug with map
       ansible.builtin.debug:
-        msg: Fruit name = {{item.name}} , Quantity = {[item.quantity}}
+        msg: Fruit name = {{item.name}} , Quantity = {{item.quantity}}
       loop:
         - { name: "apple", quantity: 100 }
         - { name: "banana", quantity: 100 }
