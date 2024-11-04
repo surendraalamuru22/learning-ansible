@@ -5,5 +5,14 @@
   tasks :
     - name : print variable
       ansible.builtin.debug:
-        msg : URL = {{ url }}
+        msg : URL = {{ url }} # "{[url}}" or "{{ url }}" or "url = {{url}}"
 
+
+- name : variables playbook2
+  hosts : all
+  vars_file :
+    - variable-file
+  tasks :
+    - name : print variable from a file
+      ansible.builtin.debug:
+        msg : "{{url}}"
