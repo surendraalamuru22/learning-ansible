@@ -10,7 +10,7 @@
 
 - name : variables playbook2
   hosts : all
-  vars_file :
+  vars_files :
     - variable-file
   tasks :
     - name : print variable from a file
