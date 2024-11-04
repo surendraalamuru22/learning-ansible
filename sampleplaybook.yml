@@ -4,3 +4,13 @@
     - name : print hello world
       ansible.builtin.debug:
         msg : "hello world"
+
+- name : demo on second play
+  hosts : all
+  tasks :
+    - name : first list of task
+      ansible.builtin.debug:
+        msg : "hey you"
+    - name : second list of task
+      ansible.builtin.debug:
+        msg : "hey"
