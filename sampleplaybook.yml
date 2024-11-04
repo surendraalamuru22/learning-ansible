@@ -14,3 +14,12 @@
     - name : second list of task
       ansible.builtin.debug:
         msg : "hey"
+
+- name : demo on third play
+  hosts : all
+  tasks :
+    - name : print multiple lines
+      ansible.builtin.debug:
+        msg :
+          - "hello world"
+          - "hey you"
