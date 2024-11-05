@@ -16,3 +16,12 @@
     - name : print variable from a file
       ansible.builtin.debug:
         msg : "{{url}}"
+
+- name : variables playbook3
+  hosts : localhost
+  tasks :
+    - name : task level variable
+      ansible.builtin.debug:
+        msg : "url = {{url}}"
+      vars :
+        url : task.com
