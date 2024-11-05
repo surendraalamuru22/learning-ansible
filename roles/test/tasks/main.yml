@@ -1,6 +1,6 @@
 - name : task from a role
-  include_vars : sample.yml
   ansible.builtin.debug:
+    include_vars : sample.yml
     msg : "{{url}}"
 #  vars :
 #    url : task.example.com
