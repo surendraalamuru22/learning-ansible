@@ -1,6 +1,10 @@
 - name : task from a role
   ansible.builtin.debug:
-    include_vars : sample.yml
     msg : "{{url}}"
 #  vars :
 #    url : task.example.com
+
+- name: Include vars
+  ansible.builtin.include_vars:
+    file: sample.yaml
+    name: url
