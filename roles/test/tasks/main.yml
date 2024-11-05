@@ -3,8 +3,3 @@
     msg : "{{url}}"
 #  vars :
 #    url : task.example.com
-
-- name: Include vars
-  ansible.builtin.include_vars:
-    file: sample.yaml
-    name: url
