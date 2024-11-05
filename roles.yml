@@ -1,4 +1,6 @@
 - name: print from a role
   hosts: localhost
+  vars:
+    url: play.example.com
   roles:
     - test
