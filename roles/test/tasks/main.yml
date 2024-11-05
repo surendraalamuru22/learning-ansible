@@ -1,0 +1,3 @@
+- name : task from a role
+  ansible.builtin.debug:
+    msg : "{{url}}"
