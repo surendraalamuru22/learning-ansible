@@ -1,6 +1,4 @@
 - name: print from a role
   hosts: localhost
-  vars_files:
-    - sample.yml
   roles:
     - test
