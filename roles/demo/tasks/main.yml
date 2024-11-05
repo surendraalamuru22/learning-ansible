@@ -10,4 +10,4 @@
   ansible.builtin.debug:
     msg: "{{URL}}"
 
-#By default, Ansible looks for the main.yml file within the tasks/ directory of a role. This main.yml serves as the default entry point for the role.
+#By default, Ansible looks for the sample.yml file within the tasks/ directory of a role. This sample.yml serves as the default entry point for the role.
