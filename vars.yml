@@ -38,4 +38,6 @@
   tasks:
     - name: print url from cli
       ansible.builtin.debug:
-        msg: "{{url}}"
+        msg:
+          - "{{url}}"
+          - "{{test}}"
