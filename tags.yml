@@ -1,0 +1,17 @@
+- name: tags playbook
+  hosts: localhost
+  tasks:
+    - name: print based on tags
+      ansible.builtin.debug:
+        msg:
+          - "{{url}}"
+      tags:
+        - example
+
+    - name: print based on tags
+      ansible.builtin.debug:
+        msg:
+          - "{{test}}"
+      tags:
+        - example
+        - test
