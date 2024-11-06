@@ -1,34 +1,41 @@
-- name : variables playbook
-  hosts : all
-  vars :
-    url : example.com
-  tasks :
-    - name : print variable
-      ansible.builtin.debug:
-        msg : URL = {{ url }} # "{[url}}" or "{{ url }}" or "url = {{url}}"
+#- name : variables playbook
+#  hosts : all
+#  vars :
+#    url : example.com
+#  tasks :
+#    - name : print variable
+#      ansible.builtin.debug:
+#        msg : URL = {{ url }} # "{[url}}" or "{{ url }}" or "url = {{url}}"
+#
+#
+#- name : variables playbook2
+#  hosts : all
+#  vars_files :
+#    - variable-file
+#  tasks :
+#    - name : print variable from a file
+#      ansible.builtin.debug:
+#        msg : "{{url}}"
+#
+#- name : variables playbook3
+#  hosts : localhost
+#  tasks :
+#    - name : task level variable
+#      ansible.builtin.debug:
+#        msg : "url = {{url}}"
+#      vars :
+#        url : task.com
+#
+#- name: Variable from Inventory
+#  hosts: localhost
+#  tasks:
+#    - name: Print URL
+#      ansible.builtin.debug:
+#        msg: URL == {{ URL }}
 
-
-- name : variables playbook2
-  hosts : all
-  vars_files :
-    - variable-file
-  tasks :
-    - name : print variable from a file
-      ansible.builtin.debug:
-        msg : "{{url}}"
-
-- name : variables playbook3
-  hosts : localhost
-  tasks :
-    - name : task level variable
-      ansible.builtin.debug:
-        msg : "url = {{url}}"
-      vars :
-        url : task.com
-
-- name: Variable from Inventory
+- name: variable playbook cli
   hosts: localhost
   tasks:
-    - name: Print URL
+    - name: print url from cli
       ansible.builtin.debug:
-        msg: URL == {{ URL }}
+        msg: "{{url}}"
