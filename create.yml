@@ -1,8 +1,17 @@
-- name: create playbook
+#- name: create playbook
+#  hosts: localhost
+#  tasks:
+#    - name: Create a directory #if it does not exist
+#      ansible.builtin.file:
+#        path: /root/surendra
+#        state: directory
+#        mode: '0755'
+
+- name: create playbook2
   hosts: localhost
   tasks:
-    - name: Create a directory #if it does not exist
+    - name: Create a file #if it does not exist
       ansible.builtin.file:
-        path: /root/surendra
-        state: directory
+        path: /root/surendra/yokshith
+        state: file
         mode: '0755'
