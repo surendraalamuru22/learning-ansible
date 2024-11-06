@@ -13,5 +13,5 @@
         msg:
           - "{{test}}"
       tags:
-        - example
+        - configuration
         - test
