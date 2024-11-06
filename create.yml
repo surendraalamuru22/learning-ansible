@@ -12,6 +12,5 @@
   tasks:
     - name: Create a file #if it does not exist
       ansible.builtin.file:
-        path: /root/surendra/yokshith
+        path: /root/surendra/yokshith.txt
         state: file
-        mode: '0755'
