@@ -13,4 +13,4 @@
     - name: Create a file #if it does not exist
       ansible.builtin.file:
         path: /root/surendra/yokshith.txt
-        state: file
+        state: touch
