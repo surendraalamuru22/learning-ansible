@@ -1,0 +1,12 @@
+- name: installing apackage on a particular server
+  hosts: all
+  tasks:
+    - name: install nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: installed
+    - name: start nginx
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+
