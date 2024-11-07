@@ -4,5 +4,5 @@
     -name: Add a line to a file if the file does not exist, without passing regexp
     ansible.builtin.lineinfile:
     path: /tmp/testfile
-    line: added new line
+    line: 192.168.1.99 foo.lab.net foo
     create: yes # If specified, the file will be created if it does not already exist.
