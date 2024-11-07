@@ -12,3 +12,9 @@
         path: /tmp/testfile
         regexp: uid
         line: uid = 1001
+
+    - name: Replace old hostname with new hostname # search a word and replace in any line
+      ansible.builtin.replace:
+       path: /tmp/testfile
+       regexp: 1001
+       replace: 9032320992
