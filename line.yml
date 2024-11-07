@@ -6,3 +6,9 @@
         path: /tmp/testfile
         line: added new line
         create: yes # If specified, the file will be created if it does not already exist.
+
+- name: Change UID & GID in App configuration
+  ansible.builtin.lineinfile:
+    path: /tmp/testfile
+    regexp: uid
+    line: uid = 1001
