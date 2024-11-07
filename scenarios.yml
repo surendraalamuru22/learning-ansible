@@ -1,5 +1,6 @@
 - name: installing apackage on a particular server
   hosts: all
+  become: yes
   tasks:
     - name: install nginx
       ansible.builtin.yum:
