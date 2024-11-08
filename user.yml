@@ -9,9 +9,9 @@
       ansible.builtin.user:
         name: john
         groups: dev # we can also give multiple by delimiting with ","
-#        append: yes
-#    - name: Remove the user 'john'
-#      ansible.builtin.user:
-#        name: john
-#        state: absent
+        append: yes
+    - name: Remove the user 'john'
+      ansible.builtin.user:
+        name: john
+        state: absent
 #        remove: yes
