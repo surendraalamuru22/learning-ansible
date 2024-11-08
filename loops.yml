@@ -23,12 +23,13 @@
 - name: coming out of a loop
   hosts: localhost
   tasks:
-    ansible.builtin.debug:
-      msg: Number = {{item}}
-    loop:
-      - 1
-      - 2
-      - 3
-      - 4
-    loop_control:
-      break_when:  item >= 3
+    - name: break the loop
+      ansible.builtin.debug:
+        msg: Number = {{item}}
+      loop:
+        - 1
+        - 2
+        - 3
+        - 4
+      loop_control:
+       break_when:  item >= 3
