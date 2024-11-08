@@ -31,5 +31,4 @@
         - 2
         - 3
         - 4
-      loop_control:
-        break_when:  item >= 3
+      when: item >= 3
