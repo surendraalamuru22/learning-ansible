@@ -5,10 +5,10 @@
       ansible.builtin.group:
         name: dev
         state: present
-#    - name: adding a user to the group
-#      ansible.builtin.user:
-#        name: john
-#        groups: dev # we can also give multiple by delimiting with ","
+    - name: adding a user to the group
+      ansible.builtin.user:
+        name: john
+        group: dev # we can also give multiple by delimiting with ","
 #        append: yes
 #    - name: Remove the user 'john'
 #      ansible.builtin.user:
