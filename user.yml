@@ -1,0 +1,17 @@
+- name: create playbook
+  hosts: localhost
+  tasks:
+    - name: create a group
+      ansible.builtin.group:
+        name: dev
+        state: present
+#    - name: adding a user to the group
+#      ansible.builtin.user:
+#        name: john
+#        groups: dev # we can also give multiple by delimiting with ","
+#        append: yes
+#    - name: Remove the user 'john'
+#      ansible.builtin.user:
+#        name: john
+#        state: absent
+#        remove: yes
