@@ -14,4 +14,4 @@
       ansible.builtin.user:
         name: john
         state: absent
-#        remove: yes
+        remove: yes

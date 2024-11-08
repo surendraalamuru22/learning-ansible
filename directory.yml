@@ -1,0 +1,8 @@
+- name: create directory
+  hosts: localhost
+  tasks:
+    ansible.builtin.file:
+      name: /tmp/dir
+      state: directory
+      owner: john
+      group: dev
