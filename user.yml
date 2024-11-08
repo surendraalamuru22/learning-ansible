@@ -8,7 +8,7 @@
     - name: adding a user to the group
       ansible.builtin.user:
         name: john
-        group: dev # we can also give multiple by delimiting with ","
+        groups: dev # we can also give multiple by delimiting with ","
 #        append: yes
 #    - name: Remove the user 'john'
 #      ansible.builtin.user:
