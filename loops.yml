@@ -32,3 +32,14 @@
         - 3
         - 4
       when: item <= 3
+
+- name: coming out of a loop
+  hosts: localhost
+  tasks:
+    - name: break the loop
+      ansible.builtin.debug:
+        msg: Boolean = {{item}}
+      loop:
+        - "true"
+        - "false"
+      when: Boolean = true
