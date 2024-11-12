@@ -32,12 +32,17 @@
 #    - name: Print URL
 #      ansible.builtin.debug:
 #        msg: URL == {{ URL }}
+#
+#- name: variable playbook cli
+#  hosts: localhost
+#  tasks:
+#    - name: print url from cli
+#      ansible.builtin.debug:
+#        msg:
+#          - "{{url}}"
+#          - "{{test}}"
 
-- name: variable playbook cli
-  hosts: localhost
-  tasks:
-    - name: print url from cli
-      ansible.builtin.debug:
-        msg:
-          - "{{url}}"
-          - "{{test}}"
+- name: print facts
+  hosts: all
+  ansible.builtin.debug:
+    msg: HostName = {{ansible_hostname}}
