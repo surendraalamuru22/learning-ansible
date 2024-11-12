@@ -47,3 +47,11 @@
   tasks:
    - ansible.builtin.debug:
        msg: HostName = {{ansible_hostname}}
+
+- name: print a variable register
+  hosts: all
+  tasks:
+    - ansible.builtin.shell: uptime
+      register: out
+
+
