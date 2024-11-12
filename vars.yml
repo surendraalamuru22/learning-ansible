@@ -57,4 +57,7 @@
     - ansible.builtin.debug:
         msg: "{{out}}"
 
+    - ansible.builtin.debug:
+        msg: "{{out.stdout}}"
+
 
