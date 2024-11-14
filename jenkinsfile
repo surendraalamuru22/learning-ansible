@@ -1,0 +1,84 @@
+#pipeline level agent
+pipeline {
+
+    agent any //Execute the Pipeline, or stage, on any available agent
+    agent none
+    agent { label 'workstation' }
+    agent {
+       node { label 'workstation' } //behaves same as above with additional functionalities
+    }
+}
+
+#stage level agent
+pipeline {
+  agent none
+  stages {
+     stage('foo') {
+        agent any
+        steps {
+           echo 'hello world'
+        }
+     }
+     stage('bar') {
+        agent {
+          node { label 'workstation' }
+        }
+        steps {
+            echo 'fuck off'
+        }
+     }
+  }
+}
+
+#conditionals in pipeline
+
+pipeline {
+    agent any
+    stages {
+      stage('foo') {
+        when {
+           branch 'main'
+        }
+        steps {
+           echo 'bye'
+        }
+      }
+      stage('bar') {
+         when {
+            tag "*"
+         }
+         steps {
+            echo "hey"
+         }
+      }
+      stage('notcondition') {
+        when {
+          not { branch 'main' }
+        }
+        steps {
+          echo "not condition"
+        }
+      }
+      stage('allofcondition') {
+         when {
+           allof {
+              branch 'main'
+              tag "*"
+           }
+         }
+         steps {
+           echo "allof"
+         }
+      }
+      stage('antofcondition')
+        when {
+          anyof {
+             branch 'main'
+             tag "*"
+          }
+        }
+        steps {
+             echo "anyof"
+        }
+    }
+}
