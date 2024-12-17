@@ -3,4 +3,4 @@
   tasks:
     - name: print password
       ansible.builtin.debug:
-        msg: "{{ lookup('hashi_vault', 'infra-secrets/data/ssh:password token=${{vault_token}} url=http://172.31.88.71:8200')}}"
+        msg: "{{ lookup('hashi_vault', 'infra-secrets/data/ssh:password token=${{vault_token}} url=https://172.31.88.71:8200 validate_certs=False')}}"
